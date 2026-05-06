@@ -5,225 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Acadian Red | Premium Guitar Amp Covers</title>
   <meta name="description" content="Acadian Red — Handcrafted premium guitar amp covers built to protect your tone. Coming soon." />
-
+  
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
-  <style>
-    :root {
-      --red:        #E01E2C;
-      --red-dark:   #B01520;
-      --silver:     #C8C8C8;
-      --silver-mid: #A0A0A0;
-      --silver-line:rgba(200,200,200,0.15);
-      --black:      #0A0A0A;
-      --black-mid:  #111111;
-      --black-card: #161616;
-      --black-card2:#1E1E1E;
-      --smoke:      #666666;
-      --white:      #F4F4F4;
-      --font-head: 'Barlow Condensed', sans-serif;
-      --font-body: 'Barlow', sans-serif;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { background: var(--black); color: var(--white); font-family: var(--font-body); font-weight: 300; line-height: 1.6; overflow-x: hidden; }
-
-    /* ANNOUNCE */
-    .announce { background: var(--red); color: var(--white); font-family: var(--font-head); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; text-align: center; padding: 9px 20px; }
-
-    /* NAV */
-    nav { position: sticky; top: 0; z-index: 100; background: rgba(10,10,10,0.97); backdrop-filter: blur(16px); border-bottom: 1px solid var(--silver-line); display: flex; align-items: center; justify-content: space-between; padding: 0 48px; height: 70px; }
-    .nav-logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
-    .logo-mark { width: 42px; height: 42px; flex-shrink: 0; }
-    .logo-text { font-family: var(--font-head); font-size: 1.1rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--white); }
-    .logo-text span { color: var(--red); }
-    .nav-links { display: flex; gap: 36px; list-style: none; }
-    .nav-links a { font-family: var(--font-head); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--silver-mid); text-decoration: none; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--white); }
-    .nav-cta { font-family: var(--font-head); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--white); background: var(--red); padding: 10px 22px; text-decoration: none; transition: background 0.2s; }
-    .nav-cta:hover { background: var(--red-dark); }
-
-    /* HERO */
-    .hero { position: relative; min-height: 92vh; display: flex; align-items: center; overflow: hidden; background: var(--black); }
-    .hero::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(200,200,200,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(200,200,200,0.04) 1px, transparent 1px); background-size: 60px 60px; mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%); }
-    .hero-red-bar { position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--red); }
-    .hero-content { position: relative; z-index: 2; padding: 80px 80px 80px 96px; max-width: 720px; }
-    .hero-eyebrow { font-family: var(--font-head); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--red); margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
-    .hero-eyebrow::after { content: ''; display: block; width: 40px; height: 2px; background: var(--red); }
-    .hero-title { font-family: var(--font-head); font-size: clamp(3.8rem, 8vw, 7rem); font-weight: 900; line-height: 0.9; letter-spacing: -0.01em; text-transform: uppercase; color: var(--white); margin-bottom: 20px; }
-    .hero-title .accent { color: var(--red); }
-    .hero-title .silver { color: var(--silver); }
-    .hero-sub { font-family: var(--font-head); font-size: 1.1rem; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase; color: var(--silver-mid); margin-bottom: 32px; }
-    .hero-desc { font-size: 1rem; color: var(--smoke); max-width: 500px; margin-bottom: 48px; line-height: 1.75; }
-    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
-    .btn-primary { font-family: var(--font-head); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; background: var(--red); color: var(--white); padding: 16px 40px; border: 2px solid var(--red); cursor: pointer; text-decoration: none; transition: all 0.2s; display: inline-block; }
-    .btn-primary:hover { background: var(--red-dark); border-color: var(--red-dark); }
-    .btn-ghost { font-family: var(--font-head); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; background: transparent; color: var(--silver); padding: 16px 40px; border: 2px solid rgba(200,200,200,0.3); cursor: pointer; text-decoration: none; transition: all 0.2s; display: inline-block; }
-    .btn-ghost:hover { border-color: var(--silver); color: var(--white); }
-    .hero-monogram { position: absolute; right: -20px; top: 50%; transform: translateY(-50%); width: 520px; height: 520px; opacity: 0.04; pointer-events: none; }
-
-    /* DIVIDER */
-    .red-divider { height: 3px; background: linear-gradient(to right, var(--red) 0%, transparent 100%); }
-
-    /* FEATURES */
-    .features-strip { background: var(--black-mid); border-top: 1px solid var(--silver-line); border-bottom: 1px solid var(--silver-line); }
-    .features-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4,1fr); }
-    .feature-item { padding: 44px 28px; border-right: 1px solid var(--silver-line); display: flex; flex-direction: column; gap: 10px; }
-    .feature-item:last-child { border-right: none; }
-    .feature-num { font-family: var(--font-head); font-size: 2rem; font-weight: 900; color: var(--red); line-height: 1; }
-    .feature-title { font-family: var(--font-head); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--white); }
-    .feature-desc { font-size: 0.83rem; color: var(--smoke); line-height: 1.6; }
-
-    /* SECTION SHARED */
-    .section-label { font-family: var(--font-head); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; color: var(--red); margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
-    .section-label::before { content: ''; display: block; width: 20px; height: 2px; background: var(--red); }
-    .section-title { font-family: var(--font-head); font-size: clamp(2rem,4vw,3rem); font-weight: 900; line-height: 1.0; text-transform: uppercase; color: var(--white); margin-bottom: 16px; letter-spacing: 0.02em; }
-    .section-title .accent { color: var(--red); }
-    .section-title .silver { color: var(--silver); }
-    .section-body { font-size: 1rem; color: var(--smoke); line-height: 1.75; }
-
-    /* PRODUCTS */
-    .products-section { background: var(--black); padding: 90px 48px; }
-    .products-header { max-width: 1200px; margin: 0 auto 56px; }
-    .products-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit,minmax(320px,1fr)); gap: 1px; background: var(--silver-line); border: 1px solid var(--silver-line); }
-
-    /* PRODUCT CARD */
-    .product-card { background: var(--black-card); position: relative; overflow: hidden; display: flex; flex-direction: column; transition: background 0.25s; }
-    .product-card:hover { background: var(--black-card2); }
-    .card-status { position: absolute; top: 14px; right: 14px; font-family: var(--font-head); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; background: var(--red); color: var(--white); padding: 5px 11px; z-index: 3; }
-
-    /* CAROUSEL */
-    .carousel { position: relative; height: 210px; background: #0E0E0E; overflow: hidden; border-bottom: 1px solid var(--silver-line); }
-    .carousel-slide { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.45s ease; }
-    .carousel-slide.active { opacity: 1; }
-    .carousel-controls { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; z-index: 2; }
-    .carousel-dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(200,200,200,0.25); border: none; cursor: pointer; padding: 0; transition: background 0.2s; }
-    .carousel-dot.active { background: var(--red); }
-    .carousel-arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(10,10,10,0.8); border: 1px solid var(--silver-line); color: var(--silver-mid); width: 30px; height: 30px; font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.2s; z-index: 2; }
-    .carousel-arrow:hover { background: var(--red); border-color: var(--red); color: var(--white); }
-    .carousel-arrow.prev { left: 8px; }
-    .carousel-arrow.next { right: 8px; }
-
-    /* CARD BODY */
-    .card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
-    .card-size-badge { font-family: var(--font-head); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase; color: var(--red); margin-bottom: 4px; }
-    .card-name { font-family: var(--font-head); font-size: 1.6rem; font-weight: 900; letter-spacing: 0.04em; text-transform: uppercase; color: var(--white); margin-bottom: 3px; }
-    .card-tagline { font-size: 0.82rem; color: var(--smoke); margin-bottom: 18px; }
-
-    /* SIZE CHART */
-    .size-chart { border: 1px solid var(--silver-line); margin-bottom: 18px; overflow: hidden; }
-    .size-chart-head { background: rgba(224,30,44,0.1); display: grid; grid-template-columns: 1fr 1fr 1fr; padding: 7px 12px; border-bottom: 1px solid var(--silver-line); }
-    .size-chart-head span { font-family: var(--font-head); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--silver-mid); }
-    .size-chart-row { display: grid; grid-template-columns: 1fr 1fr 1fr; padding: 7px 12px; border-top: 1px solid rgba(200,200,200,0.05); }
-    .size-chart-row span { font-size: 0.8rem; color: var(--white); }
-    .size-chart-row:nth-child(even) { background: rgba(255,255,255,0.02); }
-
-    /* FITS */
-    .fits-label { font-family: var(--font-head); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--silver-mid); margin-bottom: 10px; }
-    .fits-list { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 22px; flex: 1; }
-    .fits-tag { font-family: var(--font-head); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.06em; color: var(--silver); background: rgba(200,200,200,0.07); border: 1px solid var(--silver-line); padding: 4px 10px; }
-    .card-notify { width: 100%; font-family: var(--font-head); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; background: transparent; color: var(--silver); border: 1px solid var(--silver-line); padding: 13px; cursor: pointer; transition: all 0.22s; margin-top: auto; }
-    .card-notify:hover { background: var(--red); border-color: var(--red); color: var(--white); }
-
-    /* STORY */
-    .story-wrap { background: var(--black-mid); border-top: 1px solid var(--silver-line); border-bottom: 1px solid var(--silver-line); }
-    .story-section { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; }
-    .story-visual { background: var(--black); border-right: 1px solid var(--silver-line); display: flex; align-items: center; justify-content: center; min-height: 400px; position: relative; overflow: hidden; }
-    .story-bg-text { position: absolute; font-family: var(--font-head); font-size: 13rem; font-weight: 900; color: var(--silver); opacity: 0.04; line-height: 1; letter-spacing: -0.05em; pointer-events: none; }
-    .story-logo { position: relative; z-index: 1; }
-    .story-content { padding: 72px 60px; }
-
-    /* EMAIL */
-    .email-section { background: var(--red); padding: 80px 48px; text-align: center; position: relative; overflow: hidden; }
-    .email-section::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(0,0,0,0.1) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,0.1) 1px,transparent 1px); background-size: 40px 40px; }
-    .email-inner { position: relative; z-index: 1; max-width: 540px; margin: 0 auto; }
-    .email-section .section-label { justify-content: center; color: rgba(255,255,255,0.7); }
-    .email-section .section-label::before { background: rgba(255,255,255,0.5); }
-    .email-section .section-title { color: var(--white); }
-    .email-section .section-body { color: rgba(255,255,255,0.7); margin-bottom: 36px; }
-    .email-form { display: flex; max-width: 440px; margin: 0 auto; }
-    .email-input { flex: 1; background: rgba(0,0,0,0.25); border: 2px solid rgba(255,255,255,0.3); border-right: none; color: var(--white); font-family: var(--font-body); font-size: 0.9rem; padding: 14px 18px; outline: none; }
-    .email-input::placeholder { color: rgba(255,255,255,0.45); }
-    .email-submit { font-family: var(--font-head); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; background: var(--black); color: var(--white); border: 2px solid var(--black); padding: 14px 26px; cursor: pointer; transition: all 0.2s; white-space: nowrap; }
-    .email-submit:hover { background: #222; }
-
-    /* FOOTER */
-    footer { background: var(--black-mid); padding: 60px 48px 32px; border-top: 1px solid var(--silver-line); }
-    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; max-width: 1200px; margin: 0 auto 48px; }
-    .footer-brand p { font-size: 0.85rem; color: var(--smoke); line-height: 1.7; max-width: 300px; margin-top: 16px; }
-    .footer-col-title { font-family: var(--font-head); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--silver-mid); margin-bottom: 18px; }
-    .footer-links { list-style: none; }
-    .footer-links li { margin-bottom: 10px; }
-    .footer-links a { font-size: 0.85rem; color: var(--smoke); text-decoration: none; transition: color 0.2s; }
-    .footer-links a:hover { color: var(--white); }
-    .footer-bottom { max-width: 1200px; margin: 0 auto; border-top: 1px solid var(--silver-line); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; }
-    .footer-bottom p { font-family: var(--font-head); font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--smoke); }
-
-    /* MODAL */
-    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.88); z-index: 200; align-items: center; justify-content: center; }
-    .modal-overlay.open { display: flex; }
-    .modal { background: var(--black-card2); border: 1px solid var(--silver-line); border-top: 3px solid var(--red); padding: 48px; max-width: 460px; width: 90%; position: relative; }
-    .modal-close { position: absolute; top: 14px; right: 16px; background: none; border: none; color: var(--smoke); font-size: 1.5rem; cursor: pointer; line-height: 1; }
-    .modal-close:hover { color: var(--white); }
-    .modal-product-name { font-family: var(--font-head); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--red); margin-bottom: 6px; }
-    .modal-title { font-family: var(--font-head); font-size: 1.8rem; font-weight: 900; letter-spacing: 0.04em; text-transform: uppercase; color: var(--white); margin-bottom: 6px; }
-    .modal-sub { font-size: 0.88rem; color: var(--smoke); margin-bottom: 28px; line-height: 1.6; }
-    .modal-form { display: flex; flex-direction: column; gap: 10px; }
-    .modal-input { background: rgba(255,255,255,0.04); border: 1px solid var(--silver-line); color: var(--white); font-family: var(--font-body); font-size: 0.9rem; padding: 13px 16px; outline: none; transition: border-color 0.2s; }
-    .modal-input:focus { border-color: rgba(200,200,200,0.4); }
-    .modal-input::placeholder { color: var(--smoke); }
-    .modal-submit { font-family: var(--font-head); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; background: var(--red); color: var(--white); border: none; padding: 15px; cursor: pointer; transition: background 0.2s; margin-top: 4px; }
-    .modal-submit:hover { background: var(--red-dark); }
-    .modal-success { display: none; text-align: center; padding: 24px 0; }
-    .modal-success .check { font-family: var(--font-head); font-size: 3rem; font-weight: 900; color: var(--red); margin-bottom: 12px; }
-    .modal-success p { color: var(--silver-mid); font-size: 0.9rem; line-height: 1.6; }
-
-    /* ANIMATIONS */
-    .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
-    .fade-up.visible { opacity: 1; transform: none; }
-
-    /* RESPONSIVE */
-    @media (max-width: 960px) {
-      nav { padding: 0 20px; }
-      .nav-links { display: none; }
-      .hero-content { padding: 60px 24px 60px 32px; max-width: 100%; }
-      .hero-monogram { display: none; }
-      .products-section { padding: 70px 20px; }
-      .story-section { grid-template-columns: 1fr; }
-      .story-visual { min-height: 240px; border-right: none; border-bottom: 1px solid var(--silver-line); }
-      .story-content { padding: 48px 28px; }
-      .features-inner { grid-template-columns: 1fr 1fr; }
-      .footer-top { grid-template-columns: 1fr; gap: 32px; }
-      .email-form { flex-direction: column; }
-      .email-input { border-right: 2px solid rgba(255,255,255,0.3); }
-      footer { padding: 48px 24px 28px; }
-    }
-    @media (max-width: 600px) {
-      .features-inner { grid-template-columns: 1fr; }
-      .products-grid { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
-    }
-  </style>
+  
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
   <div class="announce">Launch Collection Coming Soon — Join the Waitlist for Early Access</div>
-
+  
   <nav>
     <a href="#" class="nav-logo">
-      <svg class="logo-mark" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="navsilv" x1="2" y1="6" x2="22" y2="44" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#D8D8D8"/><stop offset="1" stop-color="#888888"/>
-          </linearGradient>
-        </defs>
-        <polygon points="2,38 12,6 22,38 18,38 12,20 6,38" fill="url(#navsilv)"/>
-        <polygon points="21,6 36,6 40,16 30,22 38,38 28,38 22,26 22,38 21,38" fill="#E01E2C"/>
-        <rect x="2" y="40" width="19" height="3" fill="url(#navsilv)"/>
-        <rect x="22" y="40" width="18" height="3" fill="#E01E2C"/>
-      </svg>
+      <img src="assets/logo.svg" alt="Acadian Red" class="logo-mark" width="42" height="42">
       <span class="logo-text">ACADIAN <span>RED</span></span>
     </a>
     <ul class="nav-links">
@@ -250,6 +44,8 @@
         <a href="#products" class="btn-ghost">See the Series</a>
       </div>
     </div>
+    
+    <!-- Optional faint background monogram (kept as SVG for effect) -->
     <div class="hero-monogram" aria-hidden="true">
       <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -306,17 +102,7 @@
       <div class="story-visual">
         <div class="story-bg-text">AR</div>
         <div class="story-logo">
-          <svg width="160" height="160" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="ssilv" x1="8" y1="16" x2="88" y2="200" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#D8D8D8"/><stop offset="1" stop-color="#787878"/>
-              </linearGradient>
-            </defs>
-            <polygon points="8,184 48,16 88,184 72,184 48,80 24,184" fill="url(#ssilv)"/>
-            <polygon points="84,16 144,16 164,64 120,92 156,184 112,184 88,128 88,184 84,184" fill="#E01E2C"/>
-            <rect x="8" y="191" width="77" height="8" fill="url(#ssilv)"/>
-            <rect x="87" y="191" width="77" height="8" fill="#E01E2C"/>
-          </svg>
+          <img src="assets/logo.svg" alt="Acadian Red" width="160" height="160">
         </div>
       </div>
       <div class="story-content fade-up">
@@ -349,17 +135,7 @@
     <div class="footer-top">
       <div class="footer-brand">
         <a href="#" class="nav-logo" style="display:inline-flex;">
-          <svg class="logo-mark" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="fsilv" x1="2" y1="6" x2="22" y2="44" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#D8D8D8"/><stop offset="1" stop-color="#888888"/>
-              </linearGradient>
-            </defs>
-            <polygon points="2,38 12,6 22,38 18,38 12,20 6,38" fill="url(#fsilv)"/>
-            <polygon points="21,6 36,6 40,16 30,22 38,38 28,38 22,26 22,38 21,38" fill="#E01E2C"/>
-            <rect x="2" y="40" width="19" height="3" fill="url(#fsilv)"/>
-            <rect x="22" y="40" width="18" height="3" fill="#E01E2C"/>
-          </svg>
+          <img src="assets/logo.svg" alt="Acadian Red" class="logo-mark" width="42" height="42">
           <span class="logo-text" style="font-size:1rem;">ACADIAN <span>RED</span></span>
         </a>
         <p>Premium guitar amp covers built for musicians who take their gear seriously. Launching soon at acadianred.com.</p>
@@ -388,9 +164,10 @@
     </div>
   </footer>
 
+  <!-- Modal -->
   <div class="modal-overlay" id="modal" onclick="closeModal(event)">
     <div class="modal">
-      <button class="modal-close" onclick="closeModalDirect()">&times;</button>
+      <button class="modal-close" onclick="closeModalDirect()">×</button>
       <div class="modal-product-name" id="modal-product-name"></div>
       <div class="modal-title">Notify Me</div>
       <div class="modal-sub" id="modal-sub"></div>
@@ -406,7 +183,7 @@
     </div>
   </div>
 
-  <script>
+   <script>
     const products = [
       { id:'mini',   sizeBadge:'Size 1 — Mini',   name:'THE PETIT',   tagline:'Practice amps & lunchbox heads',
         chart:[{dim:'Width',min:'10"',max:'14"'},{dim:'Height',min:'9"',max:'13"'},{dim:'Depth',min:'7"',max:'10"'}],
