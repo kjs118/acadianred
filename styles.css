@@ -147,12 +147,7 @@ nav {
 }
 
 .hero-red-bar { 
-  position: absolute; 
-  left: 0; 
-  top: 0; 
-  bottom: 0; 
-  width: 4px; 
-  background: var(--red); 
+  display: none; 
 }
 
 .hero-content { 
@@ -338,7 +333,7 @@ nav {
 .section-label::before { 
   content: ''; 
   display: block; 
-  width: 20px; 
+  width: 32px; 
   height: 2px; 
   background: var(--red); 
 }
@@ -964,7 +959,7 @@ footer {
   .products-section { padding: 70px 20px; }
   .story-section { grid-template-columns: 1fr; }
   .story-visual { min-height: 240px; border-right: none; border-bottom: 1px solid var(--silver-line); }
-  .story-content { padding: 48px 28px; }
+  .story-content { padding: 72px 60px 72px 80px; }
   .features-inner { grid-template-columns: 1fr 1fr; }
   .footer-top { grid-template-columns: 1fr; gap: 32px; }
   .email-form { flex-direction: column; }
