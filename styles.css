@@ -970,3 +970,23 @@ footer {
   .products-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
 }
+
+/* Strong fix for Our Story text spacing */
+.story-content {
+  padding: 72px 60px 72px 90px !important;
+}
+
+.story-content .section-body {
+  padding-left: 0;
+  margin-left: 4px;
+  max-width: 560px;
+}
+
+/* Also improve the section label and title spacing */
+.story-content .section-label {
+  margin-bottom: 16px;
+}
+
+.story-content .section-title {
+  margin-bottom: 24px;
+}
