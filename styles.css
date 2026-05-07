@@ -171,11 +171,7 @@ nav {
 }
 
 .hero-eyebrow::after { 
-  content: ''; 
-  display: block; 
-  width: 40px; 
-  height: 2px; 
-  background: var(--red); 
+  display: none; 
 }
 
 .hero-title { 
