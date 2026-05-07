@@ -211,6 +211,11 @@ nav {
   flex-wrap: wrap; 
 }
 
+.hero-render { 
+  position: relative; 
+  z-index: 1; 
+}
+
 .btn-primary, .btn-ghost { 
   font-family: var(--font-head); 
   font-size: 0.75rem; 
