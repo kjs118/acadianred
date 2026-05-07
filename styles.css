@@ -1034,3 +1034,29 @@ footer {
   padding: 5px 11px;
   border-radius: 4px;
 }
+@media (max-width: 960px) {
+
+  .hero {
+    flex-direction: column;
+    padding: 60px 24px;
+    gap: 40px;
+  }
+
+  .hero-content {
+    flex: unset;
+    max-width: 100%;
+    padding: 0;
+    text-align: left;
+  }
+
+  .hero-visual {
+    flex: unset;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-render img {
+    width: min(420px, 90vw);
+    transform: none;
+  }
+}
