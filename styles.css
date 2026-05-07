@@ -224,9 +224,10 @@ nav {
 }
 
 .hero-render img {
-  max-width: 420px;
+  min-width: 520px;
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .btn-primary, .btn-ghost { 
