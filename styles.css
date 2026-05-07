@@ -126,13 +126,14 @@ nav {
 }
 
 /* HERO */
-.hero { 
-  position: relative; 
-  min-height: 92vh; 
-  display: flex; 
-  align-items: center; 
-  overflow: hidden; 
-  background: var(--black); 
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  overflow: hidden;
+  background: var(--black);
 }
 
 .hero-section { 
