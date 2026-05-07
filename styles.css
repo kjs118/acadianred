@@ -1053,3 +1053,38 @@ footer {
     padding: 9px 12px;
   }
 }
+
+/* ── SOCIAL ICONS ───────────────────────────────── */
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+ 
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--silver-line);
+  background: transparent;
+  transition: all 0.22s;
+  flex-shrink: 0;
+}
+ 
+.social-link svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--silver-mid);
+  transition: fill 0.22s;
+}
+ 
+.social-link:hover {
+  border-color: var(--red);
+  background: var(--red);
+}
+ 
+.social-link:hover svg {
+  fill: var(--white);
+}
