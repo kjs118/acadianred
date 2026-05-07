@@ -135,6 +135,24 @@ nav {
   background: var(--black); 
 }
 
+.hero-section { 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  align-items: stretch; 
+}
+.hero-visual { 
+  background: var(--black); 
+  border-right: 1px solid var(--silver-line); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  min-height: 400px; 
+  position: relative; 
+  overflow: hidden; 
+}
+
 .hero::before { 
   content: ''; 
   position: absolute; 
