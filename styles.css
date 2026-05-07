@@ -668,11 +668,16 @@ nav {
   background-size: 40px 40px; 
 }
 
-.email-inner { 
-  position: relative; 
-  z-index: 1; 
-  max-width: 540px; 
-  margin: 0 auto; 
+.email-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.email-section .section-title {
+  color: #fff;
+  margin-bottom: 20px;
 }
 
 .email-section .section-label { 
@@ -688,9 +693,19 @@ nav {
   color: var(--white); 
 }
 
-.email-section .section-body { 
-  color: rgba(255,255,255,0.7); 
-  margin-bottom: 36px; 
+/* Email Section Text Improvements */
+.email-section .section-body {
+  color: rgba(255, 255, 255, 0.92);   /* Brighter white */
+  font-size: 1.02rem;                 /* Slightly larger */
+  line-height: 1.65;
+}
+
+.email-section .section-label {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.email-input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .email-form { 
@@ -989,4 +1004,15 @@ footer {
 
 .story-content .section-title {
   margin-bottom: 24px;
+}
+.fits-tag {
+  font-family: var(--font-head);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--white);                    /* Changed from silver */
+  background: rgba(224, 30, 44, 0.15);   /* Subtle red tint */
+  border: 1px solid rgba(224, 30, 44, 0.3);
+  padding: 5px 11px;
+  border-radius: 4px;
 }
