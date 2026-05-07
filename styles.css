@@ -352,6 +352,8 @@ nav {
   font-size: 1rem; 
   color: var(--smoke); 
   line-height: 1.75; 
+  padding-left: 4px;           /* Small buffer */
+  max-width: 620px;            /* Prevents text from going too wide */
 }
 
 /* PRODUCTS */
