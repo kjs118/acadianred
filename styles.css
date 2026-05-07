@@ -144,6 +144,7 @@ nav {
   align-items: stretch; 
 }
 .hero-visual {
+  flex: 1.6;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -224,10 +225,9 @@ nav {
 }
 
 .hero-render img {
-  min-width: 520px;
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 600px;
+  max-width: 100%;
+  transform: scale(1.05);
 }
 
 .btn-primary, .btn-ghost { 
