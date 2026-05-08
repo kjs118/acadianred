@@ -141,11 +141,9 @@
       <h2 class="section-title">Be First In Line</h2>
       <p class="section-body">Join the list and get launch-day access, pre-order pricing, and updates as we get closer to the drop.</p>
 
-      <form class="email-form" onsubmit="submitToGoogle(event)">
+    <form class="email-form" onsubmit="submitToGoogle(event)">
+  <input class="email-input" type="text" id="waitlist-name" placeholder="Your name (optional)" />
   <input class="email-input" type="email" id="waitlist-email" placeholder="your@email.com" required />
-  <button class="email-submit" type="submit">Notify Me</button>
-</form><form class="email-form" onsubmit="submitToGoogle(event)">
-  <input class="email-input" type="email" id="waitlist-email" placeholder="name" required />
   <button class="email-submit" type="submit">Notify Me</button>
 </form>
     
@@ -391,17 +389,19 @@
     renderCards();
     document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
 
-    function submitToGoogle(e) {
+function submitToGoogle(e) {
   e.preventDefault();
   const email = document.getElementById('waitlist-email').value;
+  const name  = document.getElementById('waitlist-name').value || '';
 
-  // Replace these with YOUR actual entry IDs from the pre-filled link
-  const FORM_ID = '1FAIpQLSdSkBZc8RrZFG0jTre1ThPwV1lPjA4dXoYfYorLA_o_H-nZBQ';
+  const FORM_ID     = '1FAIpQLSdSkBZc8RrZFG0jTre1ThPwV1lPjA4dXoYfYorLA_o_H-nZBQ';
   const EMAIL_ENTRY = 'entry.1170893990';
-  const NAME_ENTRY    = 'entry.2031611599';             // your name field entry ID
+  const NAME_ENTRY  = 'entry.2031611599';
 
-
-  const url = `https://docs.google.com/forms/d/e/${FORM_ID}/formResponse?${EMAIL_ENTRY}=${encodeURIComponent(email)}&submit=Submit`;
+  const url = `https://docs.google.com/forms/d/e/${FORM_ID}/formResponse`
+            + `?${EMAIL_ENTRY}=${encodeURIComponent(email)}`
+            + `&${NAME_ENTRY}=${encodeURIComponent(name)}`
+            + `&submit=Submit`;
 
   fetch(url, { method: 'POST', mode: 'no-cors' })
     .then(() => {
@@ -409,12 +409,10 @@
       document.getElementById('email-success').style.display = 'block';
     })
     .catch(() => {
-      // no-cors means fetch always "succeeds" — this rarely fires
       document.querySelector('.email-form').style.display = 'none';
       document.getElementById('email-success').style.display = 'block';
     });
 }
-    
   </script>
 </body>
 </html>
