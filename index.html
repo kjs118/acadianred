@@ -140,10 +140,25 @@
       <div class="section-label">Early Access</div>
       <h2 class="section-title">Be First In Line</h2>
       <p class="section-body">Join the list and get launch-day access, pre-order pricing, and updates as we get closer to the drop.</p>
-      <form class="email-form" onsubmit="handleEmailSubmit(event)">
-        <input class="email-input" type="email" placeholder="your@email.com" required id="hero-email" />
-        <button class="email-submit" type="submit">Notify Me</button>
-      </form>
+      <form
+  class="email-form"
+  action="https://buttondown.com/api/emails/embed-subscribe/acadianred"
+  method="post"
+  target="popupwindow"
+  onsubmit="window.open('https://buttondown.com/acadianred', 'popupwindow')"
+>
+  <input
+    class="email-input"
+    type="email"
+    name="email"
+    placeholder="your@email.com"
+    required
+  />
+
+  <button class="email-submit" type="submit">
+    Notify Me
+  </button>
+</form>
       <div id="email-success" style="display:none;margin-top:20px;">
         <p style="color:rgba(255,255,255,0.85);font-family:var(--font-head);font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;">✓ &nbsp; You're on the list — we'll be in touch.</p>
       </div>
