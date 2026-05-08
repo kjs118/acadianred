@@ -140,26 +140,16 @@
       <div class="section-label">Early Access</div>
       <h2 class="section-title">Be First In Line</h2>
       <p class="section-body">Join the list and get launch-day access, pre-order pricing, and updates as we get closer to the drop.</p>
-      <form
-  class="email-form"
-  action="https://buttondown.com/api/emails/embed-subscribe/acadianred"
-  method="post"
-  target="popupwindow"
-  onsubmit="window.open('https://buttondown.com/acadianred', 'popupwindow')"
->
-  <input
-    class="email-input"
-    type="email"
-    name="email"
-    placeholder="your@email.com"
-    required
-  />
 
-  <button class="email-submit" type="submit">
-    Notify Me
-  </button>
+      <form class="email-form" onsubmit="submitToGoogle(event)">
+  <input class="email-input" type="email" id="waitlist-email" placeholder="your@email.com" required />
+  <button class="email-submit" type="submit">Notify Me</button>
+</form><form class="email-form" onsubmit="submitToGoogle(event)">
+  <input class="email-input" type="email" id="waitlist-email" placeholder="your@email.com" required />
+  <button class="email-submit" type="submit">Notify Me</button>
 </form>
-      <div id="email-success" style="display:none;margin-top:20px;">
+    
+        <div id="email-success" style="display:none;margin-top:20px;">
         <p style="color:rgba(255,255,255,0.85);font-family:var(--font-head);font-size:0.78rem;letter-spacing:0.18em;text-transform:uppercase;">✓ &nbsp; You're on the list — we'll be in touch.</p>
       </div>
     </div>
@@ -400,6 +390,31 @@
     /* ── INIT ───────────────────────────────────── */
     renderCards();
     document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+    function submitToGoogle(e) {
+  e.preventDefault();
+  const email = document.getElementById('waitlist-email').value;
+
+  // Replace these with YOUR actual entry IDs from the pre-filled link
+  const FORM_ID = '1FAIpQLSdSkBZc8RrZFG0jTre1ThPwV1lPjA4dXoYfYorLA_o_H-nZBQ';
+  const EMAIL_ENTRY = 'entry.1170893990';
+  const NAME_ENTRY    = 'entry.2031611599';             // your name field entry ID
+
+
+  const url = `https://docs.google.com/forms/d/e/${FORM_ID}/formResponse?${EMAIL_ENTRY}=${encodeURIComponent(email)}&submit=Submit`;
+
+  fetch(url, { method: 'POST', mode: 'no-cors' })
+    .then(() => {
+      document.querySelector('.email-form').style.display = 'none';
+      document.getElementById('email-success').style.display = 'block';
+    })
+    .catch(() => {
+      // no-cors means fetch always "succeeds" — this rarely fires
+      document.querySelector('.email-form').style.display = 'none';
+      document.getElementById('email-success').style.display = 'block';
+    });
+}
+    
   </script>
 </body>
 </html>
